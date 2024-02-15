@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=16
+VERSION=18
 INSTALLZIP=install_xkb.zip
 
 if [ "$(id -u)" = "0" ]; then 
@@ -61,7 +61,7 @@ if [ "$(id -u)" = "0" ]; then
   fi
 
   DRIVER=Optimot_Linux_$TARGET\_$VERSION.zip
-  URL="https://optimot.fr/downloads/Optimot_1.6/linux/$DRIVER"
+  URL="https://optimot.fr/downloads/Optimot_1.8/linux/$DRIVER"
   curl -o $TMP/$DRIVER $URL 
   if [ ! -e "$TMP/$DRIVER" ] || [ ! -s "$TMP/$DRIVER" ]; then
     echo "Impossible de télécharger le pilote."
