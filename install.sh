@@ -27,7 +27,7 @@ if [ "$(id -u)" = "0" ]; then
   TARGET=""
 
   while true; do
-      echo "Appuyez sur 1 pour ISO et sur 2 pour Ergo."
+      echo "Appuyez sur 1 pour ISO, sur 2 pour Ergo, et 3 pour ANSI."
       read -r -p "Entrez votre target : " choice
 
       case $choice in
@@ -39,8 +39,12 @@ if [ "$(id -u)" = "0" ]; then
               TARGET="Ergo"
               break
               ;;
+          3)
+              TARGET="ANSI"
+              break
+              ;;
           *)
-              echo "Choix invalide. Veuillez entrer 1 ou 2."
+              echo "Choix invalide. Veuillez entrer 1, 2 ou 3."
               ;;
       esac
   done
