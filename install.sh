@@ -74,7 +74,7 @@ if [ "$(id -u)" = "0" ]; then
   XKB=`ls -1 $TMP/*.xkb | head -n1`
   XCOMPOSE=`ls -1 $TMP/*.XCompose | head -n1`
 
-  python3 $TMP/install_xkb.py $XKB $XCOMPOSE
+  python3 $TMP/install_xkb.py "$XKB" "$XCOMPOSE"
 
 else 
   echo "Veuillez lancer cette commande avec des droits super utilisateur (sudo)"; 
