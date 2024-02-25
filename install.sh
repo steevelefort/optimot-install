@@ -7,19 +7,19 @@ if [ "$(id -u)" = "0" ]; then
   echo "Installation du pilote Optimot Linux"; 
 
   # Vérification de la présence de curl
-  if ! command -v curl &> /dev/null; then
+  if ! command -v curl > /dev/null 2>&1; then
       echo "curl n'est pas installé. Veuillez l'installer pour continuer."
       exit 1
   fi
 
   # Vérification de la présence de unzip
-  if ! command -v unzip &> /dev/null; then
+  if ! command -v unzip > /dev/null 2>&1; then
       echo "unzip n'est pas installé. Veuillez l'installer pour continuer."
       exit 1
   fi
 
   # Vérification de la présence de python3
-  if ! command -v python3 &> /dev/null; then
+  if ! command -v python3 > /dev/null 2>&1; then
       echo "python3 n'est pas installé. Veuillez l'installer pour continuer."
       exit 1
   fi
